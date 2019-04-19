@@ -1,0 +1,5 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+SET(CMAKE_INSTALL_PREFIX ${CMAKE_CURRENT_SOURCE_DIR}/dist)
+INCLUDE_DIRECTORIES(./src)
+SET(IotSource ./src/aliIot.c ./src/sha1.c ./src/mqtt/mongoose.c)
+ADD_EXECUTABLE(main ${IotSource})
