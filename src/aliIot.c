@@ -81,6 +81,8 @@ int connectIot(char *productKey, char *deviceName, char *deviceSecret) {
 
     s_user_name = usernameStr;
     s_password = sign->sign;
+
+
     s_client_id = clientIdStr;
     if (mg_connect(&mgr, host, ev_handler) == NULL) {
         fprintf(stderr, "mg_connect(%s) failed\n", host);
@@ -150,9 +152,9 @@ static void ev_handler(struct mg_connection *nc, int ev, void *p) {
 }
 
 int main() {
-    char *productKey = "a1GvAwy4lNt";
-    char *deviceName = "pos";
-    char *deviceSecret = "deviceSecret";
+    char *productKey = "a1wwwwnRy777bf";
+    char *deviceName = "test-0001";
+    char *deviceSecret = "aJM5PFtBwsWNXaPx3RmsndJDaF";
     connectIot(productKey, deviceName, deviceSecret);
 
     return 1;
